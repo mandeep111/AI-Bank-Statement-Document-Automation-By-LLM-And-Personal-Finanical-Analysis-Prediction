@@ -35,11 +35,17 @@ langchain-docling
 PyPDF2
 pymupdf 
 pymupdf4llm
-docling
+doclingreport_task = Task(
+
+    description="Generate a report from the document",
+    expected_output="Output the report of the document",
+    agent=report_agent
+)
 
 #new version of langchain
 langchain-chroma
 langchain-huggingface
+langchain-ollama==0.3.3
 
 
 #object detection models
@@ -53,8 +59,8 @@ ragas
 
 # AI Agents
 langgraph
-crewai==0.121.0 
-crewai[tools]==0.121.0
+crewai==0.134.0  #0.121.0 
+crewai[tools]==0.134.0  #0.121.0
 # crewai-tools
 opik==1.7.26
 
@@ -70,4 +76,4 @@ fastembed-gpu # for fast embedding gpu
 
 # litellm
 litellm
-opik==1.7.13
+opik==1.7.40  #1.7.13
